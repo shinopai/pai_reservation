@@ -1,0 +1,8 @@
+{
+  "name": "app",
+  "private": true,
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds",
+    "build:css": "sass ./app/assets/stylesheets/application.sass.css -o ./app/assets/builds/application.css"
+  }
+}
