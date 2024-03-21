@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    models:
+      tutor: "講師"
+      student: "生徒"
+    attributes:
+      tutor:
+        name: "名前"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワード確認"
+      student:
+        name: "名前"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワード確認"
