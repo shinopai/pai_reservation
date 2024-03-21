@@ -78,3 +78,10 @@ gem 'devise-i18n'
 # css&js
 gem 'jsbundling-rails'
 gem 'cssbundling-rails'
+
+# テストデータ生成
+gem 'faker'
+
+# 日本語化
+gem 'rails-i18n'
+gem 'devise-i18n'
