@@ -3,6 +3,10 @@
   "private": true,
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds",
-    "build:css": "sass ./app/assets/stylesheets/application.sass.css -o ./app/assets/builds/application.css"
+    "build:css": "sass ./app/assets/stylesheets/application.sass.scss ./app/assets/builds/application.css"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "sass": "^1.72.0"
   }
 }

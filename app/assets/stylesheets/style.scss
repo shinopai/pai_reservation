@@ -1,0 +1,23 @@
+@import "basic";
+@import "mixin";
+
+/* トップページ */
+.top {
+  &__btns {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    a {
+      background-color: #171717;
+      color: #fff;
+      font-size: 1.4rem;
+      width: 120px;
+      padding: 0.5em 0;
+      text-align: center;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

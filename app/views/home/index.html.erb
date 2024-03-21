@@ -1,1 +1,6 @@
 <%= render partial: 'shared/page_title', locals: { page_title: 'トップページ' } %>
+
+<div class="top__btns flex">
+  <%= link_to '講師ログイン', new_tutor_session_path, class: 'tutor' %>
+  <%= link_to '生徒ログイン', new_student_session_path, class: 'student' %>
+</div>
