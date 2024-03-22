@@ -22,4 +22,92 @@
   }
 }
 
-/* フォーム */
+/* ヘッダー */
+.header {
+  border-bottom: 1px solid #ababab;
+  &__inner {
+    justify-content: space-between;
+    align-items: center;
+    @include mq(w-520) {
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+  &__logo {
+    width: 100px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__menu {
+    font-size: 1.4rem;
+    column-gap: 30px;
+    align-items: center;
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+      &.logout {
+        background-color: #171717;
+        color: #fff;
+        width: 100px;
+        height: 30px;
+        @include centering;
+        &:hover {
+          opacity: 0.8;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  @include mq(w-520) {
+    padding-bottom: 15px;
+  }
+}
+
+/* メイン */
+.main {
+  @include set-border(1px, solid, #fafafa);
+  padding: 30px 0;
+  &__heading {
+    font-size: 1.7rem;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 0.5em;
+    position: relative;
+    &::after {
+      @include set-pseudo-no-img(220px, 2px);
+      background-color: #414141;
+      left: 0;
+      top: initial;
+      bottom: 0;
+    }
+  }
+  &-list {
+    margin-top: 25px;
+    &__heading {
+      font-size: 1.6rem;
+      border-bottom: 1px solid #eeeeee;
+      padding-bottom: 0.2em;
+    }
+    &__cont {
+      justify-content: space-between;
+      padding: 20px 0;
+      dl {
+        font-size: 1.6rem;
+        width: 45%;
+        dt {
+          float: left;
+        }
+        dd {
+          margin-left: 10em;
+        }
+        @include mq(w-520) {
+          width: 100%;
+        }
+      }
+      @include mq(w-520) {
+        row-gap: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<header class="header">
+  <div class="container">
+    <div class="header__inner flex">
+      <h1 class="header__logo">
+        <%= link_to image_tag('logo_site.webp'), get_mypage_link(request.fullpath) %>
+      </h1>
+      <div class="header__menu flex">
+        <%= link_to '講師マイページ', get_mypage_link(request.fullpath) %>
+        <%= link_to '日程管理', root_path %>
+        <%= link_to 'ログアウト', get_logout_link(request.fullpath), class: 'logout' %>
+      </div>
+    </div>
+  </div>
+</header>
