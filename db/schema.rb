@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_18_042206) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_23_112146) do
+  create_table "schedules", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.datetime "start_date"
+    t.bigint "tutor_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["start_date", "tutor_id"], name: "index_schedules_on_start_date_and_tutor_id", unique: true
+    t.index ["tutor_id"], name: "index_schedules_on_tutor_id"
+  end
+
   create_table "students", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
@@ -39,4 +48,5 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_18_042206) do
     t.index ["reset_password_token"], name: "index_tutors_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "schedules", "tutors"
 end
