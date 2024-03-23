@@ -30,5 +30,10 @@ Rails.application.routes.draw do
     get '/mypage', to: 'mypage/index#index', as: :mypage
   end
 
+  # 生徒ルーティング
+  namespace :students do
+    # マイページ
+    get '/mypage', to: 'mypage/index#index', as: :mypage
+  end
 
 end

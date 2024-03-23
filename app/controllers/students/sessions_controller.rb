@@ -24,4 +24,9 @@ class Students::SessionsController < Devise::SessionsController
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
+
+  # The path used after sign in.
+  def after_sign_in_path_for(resource)
+    students_mypage_path
+  end
 end

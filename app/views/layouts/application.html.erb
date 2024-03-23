@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <!-- ヘッダー -->
+    <% if tutor_signed_in? || student_signed_in? %>
+      <%= render partial: 'partial/header' %>
+    <% end %>
+
+    <!-- フラッシュメッセージ -->
     <% if flash[:notice] %>
       <p class="notice"><%= notice %></p>
     <% end %>
@@ -18,6 +24,7 @@
       <p class="alert"><%= alert %></p>
     <% end %>
 
+    <!-- メイン -->
     <%= yield %>
   </body>
 </html>

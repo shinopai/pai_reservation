@@ -1,0 +1,50 @@
+<%= render partial: 'shared/page_title', locals: { page_title: current_student.name } %>
+
+<!-- メイン -->
+<main class="main">
+  <div class="container">
+  <h2 class="main__heading">
+    <%= current_student.name %>さんのマイページ
+  </h2>
+  <div class="main-list">
+    <h3 class="main-list__heading">仮予約一覧</h3>
+    <div class="main-list__cont flex">
+      <dl>
+        <dt>開始時間</dt>
+        <dd>test時間</dd>
+        <dt>生徒名</dt>
+        <dd>test太郎</dd>
+        <dt>実施場所</dt>
+        <dd>test会場</dd>
+        <dt>仮予約を取り消す</dt>
+        <dd>button</dd>
+      </dl>
+      <dl>
+        <dt>開始時間</dt>
+        <dd>test時間</dd>
+        <dt>生徒名</dt>
+        <dd>test太郎</dd>
+        <dt>実施場所</dt>
+        <dd>test会場</dd>
+        <dt>仮予約を取り消す</dt>
+        <dd>button</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="main-list">
+    <h3 class="main-list__heading">予約一覧</h3>
+    <div class="main-list__cont flex">
+      <dl>
+        <dt>開始時間</dt>
+        <dd>test時間</dd>
+        <dt>生徒名</dt>
+        <dd>test太郎</dd>
+        <dt>実施場所</dt>
+        <dd>test会場</dd>
+        <dt>予約を取り消す</dt>
+        <dd>button</dd>
+      </dl>
+    </div>
+  </div>
+  </div>
+</main>
