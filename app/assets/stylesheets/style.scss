@@ -99,6 +99,10 @@
       top: initial;
       bottom: 0;
     }
+    &--large {
+      font-size: 2rem;
+      color: #757575;
+    }
   }
   &-list {
     margin-top: 25px;
@@ -125,6 +129,66 @@
       }
       @include mq(w-520) {
         row-gap: 20px;
+      }
+    }
+  }
+  &__txt {
+    font-size: 1.4rem;
+    margin-top: 5px;
+  }
+  .form {
+    margin-top: 20px;
+    width: min(100%, 400px);
+    &__label {
+      font-size: 1.2rem;
+    }
+    &__input {
+      &--datetime {
+        width: min(100%, 250px);
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+      &--submit {
+        width: min(100%, 100px);
+        height: 30px;
+        margin-top: 10px;
+        font-size: 1.2rem;
+        background-color: #171717;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+/* シンプルカレンダー */
+.simple-calendar {
+  margin-top: 10px;
+  .calendar-heading {
+    .flex {
+      column-gap: 10px;
+      font-size: 1.4rem;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+  .table {
+    border-collapse: collapse;
+    margin-top: 5px;
+    th,
+    td {
+      font-size: 1.4rem;
+      padding: 0.5em;
+      @include set-border(1px, solid, #e9e7d9);
+    }
+    td {
+      &.today {
+        background-color: #ffffc1;
       }
     }
   }

@@ -1,0 +1,20 @@
+<%= render partial: 'shared/page_title', locals: { page_title: current_tutor.name + ' 日程管理' } %>
+
+<main class="main">
+  <div class="container">
+  <h2 class="main__heading--large">
+    <%= current_tutor.name %>先生日程管理画面
+  </h2>
+  <p class="main__txt">3ヶ月先まで日程管理することができます。</p>
+  <%= form_with(model: @schedule, url: tutors_schedule_confirm_path, local: true, class: 'form') do |schedule| %>
+    <%= schedule.label :start_date, '授業日時', class: 'form__label' %>
+    <%= schedule.datetime_field :start_date, class: 'form__input--datetime', step: '900' %>
+    <br>
+    <%= schedule.submit '日程を登録する', class: 'form__input--submit' %>
+  <% end %>
+
+  <%= week_calendar events: @schedules do |date, schedule| %>
+  <%= date %>
+  <% end %>
+  </div>
+</main>

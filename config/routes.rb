@@ -28,6 +28,12 @@ Rails.application.routes.draw do
   namespace :tutors do
     # マイページ
     get '/mypage', to: 'mypage/index#index', as: :mypage
+
+    # 日程管理
+    get '/:id/schedule', to: 'schedule/index#index', as: :schedule
+
+    # 新規日程確認
+    post '/:id/schedule/confirm', to: 'schedule/confirm#index', as: :schedule_confirm
   end
 
   # 生徒ルーティング

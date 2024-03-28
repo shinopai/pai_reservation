@@ -6,7 +6,7 @@
       </h1>
       <div class="header__menu flex">
         <%= link_to '講師マイページ', get_mypage_link(request.fullpath) %>
-        <%= link_to '日程管理', root_path %>
+        <%= link_to '日程管理', tutors_schedule_path(current_tutor.id) %>
         <%= link_to 'ログアウト', get_logout_link(request.fullpath), class: 'logout' %>
       </div>
     </div>
